@@ -6,3 +6,17 @@
 //
 
 import Foundation
+
+struct AuthenticationRequest: Codable {
+    let email: String
+    let session: Int
+}
+
+extension AuthenticationRequest {
+    func toMap() -> [String: Any] {
+        return [
+            "email": email,
+            "session": session
+        ]
+    }
+}

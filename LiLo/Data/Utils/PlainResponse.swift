@@ -6,3 +6,12 @@
 //
 
 import Foundation
+
+struct PlainResponse: Codable {
+    let meta: Meta
+    
+    struct Meta: Codable {
+        let success: Bool
+        let message: String
+    }
+}

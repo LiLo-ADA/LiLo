@@ -6,3 +6,13 @@
 //
 
 import Foundation
+
+struct BaseResponse<T: Codable>: Codable {
+    let meta: Meta
+    let data: T?
+    
+    struct Meta: Codable {
+        let success: Bool
+        let message: String
+    }
+}

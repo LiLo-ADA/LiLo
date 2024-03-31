@@ -14,11 +14,19 @@ protocol LockerApi {
     
     func getMyLocker() async -> Result<LockerResponse, Error>
     
-    func lockIn() async -> Result<Void, Error>
+    func lockIn(
+        request: LockerIdRequest
+    ) async -> Result<Void, Error>
     
-    func lockOut() async -> Result<Void, Error>
+    func lockOut(
+        request: LockerIdRequest
+    ) async -> Result<Void, Error>
     
-    func reportFilled() async -> Result<Void, Error>
+    func reportFilled(
+        request: LockerIdRequest
+    ) async -> Result<Void, Error>
     
-    func reportEmpty() async -> Result<Void, Error>
+    func reportEmpty(
+        request: LockerIdRequest
+    ) async -> Result<Void, Error>
 }

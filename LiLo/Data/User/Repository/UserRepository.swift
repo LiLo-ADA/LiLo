@@ -6,3 +6,10 @@
 //
 
 import Foundation
+
+protocol UserRepository {
+    func authenticate(
+        email: String,
+        session: Int
+    ) async -> Result<Void, Error>
+}

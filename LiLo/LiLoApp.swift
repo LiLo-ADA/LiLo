@@ -9,6 +9,10 @@ import SwiftUI
 
 @main
 struct LiLoApp: App {
+    init() {
+        AppModule()
+    }
+    
     var body: some Scene {
         WindowGroup {
             ContentView()

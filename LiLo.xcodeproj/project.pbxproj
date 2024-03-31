@@ -7,6 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C72FAEE52BB9346C00FADFE7 /* UserApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72FAEE42BB9346C00FADFE7 /* UserApi.swift */; };
+		C72FAEEA2BB934E300FADFE7 /* AuthenticationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72FAEE92BB934E300FADFE7 /* AuthenticationRequest.swift */; };
+		C72FAEED2BB9358F00FADFE7 /* BaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72FAEEC2BB9358F00FADFE7 /* BaseResponse.swift */; };
+		C72FAEEF2BB935B800FADFE7 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72FAEEE2BB935B800FADFE7 /* NetworkError.swift */; };
+		C72FAEF12BB935D300FADFE7 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72FAEF02BB935D300FADFE7 /* Constant.swift */; };
+		C72FAEF42BB9367C00FADFE7 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72FAEF32BB9367C00FADFE7 /* Keychain.swift */; };
+		C72FAEF62BB9369F00FADFE7 /* DependencyInjector.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72FAEF52BB9369F00FADFE7 /* DependencyInjector.swift */; };
+		C72FAEF82BB936BE00FADFE7 /* ApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72FAEF72BB936BE00FADFE7 /* ApiRequest.swift */; };
+		C72FAEFA2BB9389B00FADFE7 /* AuthenticationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72FAEF92BB9389B00FADFE7 /* AuthenticationResponse.swift */; };
+		C72FAEFC2BB938B300FADFE7 /* UserApiImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72FAEFB2BB938B300FADFE7 /* UserApiImpl.swift */; };
+		C72FAEFE2BB93A6000FADFE7 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72FAEFD2BB93A6000FADFE7 /* UserRepository.swift */; };
+		C72FAF002BB95BE400FADFE7 /* UserRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72FAEFF2BB95BE400FADFE7 /* UserRepositoryImpl.swift */; };
+		C72FAF022BB95D5000FADFE7 /* AppModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72FAF012BB95D5000FADFE7 /* AppModule.swift */; };
+		C72FAF072BB9B9D500FADFE7 /* LockerApiImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72FAF062BB9B9D500FADFE7 /* LockerApiImpl.swift */; };
+		C72FAF092BB9B9DE00FADFE7 /* LockerApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72FAF082BB9B9DE00FADFE7 /* LockerApi.swift */; };
+		C72FAF0D2BB9B9FB00FADFE7 /* LockerRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72FAF0C2BB9B9FB00FADFE7 /* LockerRepositoryImpl.swift */; };
+		C72FAF0F2BB9BA0300FADFE7 /* LockerRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72FAF0E2BB9BA0300FADFE7 /* LockerRepository.swift */; };
+		C72FAF112BB9BE2A00FADFE7 /* AreaRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72FAF102BB9BE2A00FADFE7 /* AreaRequest.swift */; };
+		C72FAF132BB9BE7400FADFE7 /* LockerIdRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72FAF122BB9BE7400FADFE7 /* LockerIdRequest.swift */; };
+		C72FAF152BB9C35E00FADFE7 /* LockerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72FAF142BB9C35E00FADFE7 /* LockerResponse.swift */; };
+		C72FAF182BB9C7DE00FADFE7 /* PlainResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72FAF172BB9C7DE00FADFE7 /* PlainResponse.swift */; };
 		C77A1E412BB41EAE006FE673 /* LiLoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77A1E402BB41EAE006FE673 /* LiLoApp.swift */; };
 		C77A1E432BB41EAE006FE673 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77A1E422BB41EAE006FE673 /* ContentView.swift */; };
 		C77A1E452BB41EAF006FE673 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C77A1E442BB41EAF006FE673 /* Assets.xcassets */; };
@@ -14,6 +35,27 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C72FAEE42BB9346C00FADFE7 /* UserApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserApi.swift; sourceTree = "<group>"; };
+		C72FAEE92BB934E300FADFE7 /* AuthenticationRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationRequest.swift; sourceTree = "<group>"; };
+		C72FAEEC2BB9358F00FADFE7 /* BaseResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseResponse.swift; sourceTree = "<group>"; };
+		C72FAEEE2BB935B800FADFE7 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		C72FAEF02BB935D300FADFE7 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		C72FAEF32BB9367C00FADFE7 /* Keychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
+		C72FAEF52BB9369F00FADFE7 /* DependencyInjector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyInjector.swift; sourceTree = "<group>"; };
+		C72FAEF72BB936BE00FADFE7 /* ApiRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRequest.swift; sourceTree = "<group>"; };
+		C72FAEF92BB9389B00FADFE7 /* AuthenticationResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationResponse.swift; sourceTree = "<group>"; };
+		C72FAEFB2BB938B300FADFE7 /* UserApiImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserApiImpl.swift; sourceTree = "<group>"; };
+		C72FAEFD2BB93A6000FADFE7 /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
+		C72FAEFF2BB95BE400FADFE7 /* UserRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepositoryImpl.swift; sourceTree = "<group>"; };
+		C72FAF012BB95D5000FADFE7 /* AppModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModule.swift; sourceTree = "<group>"; };
+		C72FAF062BB9B9D500FADFE7 /* LockerApiImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockerApiImpl.swift; sourceTree = "<group>"; };
+		C72FAF082BB9B9DE00FADFE7 /* LockerApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockerApi.swift; sourceTree = "<group>"; };
+		C72FAF0C2BB9B9FB00FADFE7 /* LockerRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockerRepositoryImpl.swift; sourceTree = "<group>"; };
+		C72FAF0E2BB9BA0300FADFE7 /* LockerRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockerRepository.swift; sourceTree = "<group>"; };
+		C72FAF102BB9BE2A00FADFE7 /* AreaRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaRequest.swift; sourceTree = "<group>"; };
+		C72FAF122BB9BE7400FADFE7 /* LockerIdRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockerIdRequest.swift; sourceTree = "<group>"; };
+		C72FAF142BB9C35E00FADFE7 /* LockerResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockerResponse.swift; sourceTree = "<group>"; };
+		C72FAF172BB9C7DE00FADFE7 /* PlainResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlainResponse.swift; sourceTree = "<group>"; };
 		C77A1E3D2BB41EAE006FE673 /* LiLo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LiLo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C77A1E402BB41EAE006FE673 /* LiLoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiLoApp.swift; sourceTree = "<group>"; };
 		C77A1E422BB41EAE006FE673 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -33,6 +75,151 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C72FAEDD2BB932D700FADFE7 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				C72FAEEB2BB9355400FADFE7 /* Utils */,
+				C72FAEE02BB932EE00FADFE7 /* Locker */,
+				C72FAEDF2BB932E900FADFE7 /* User */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		C72FAEDE2BB932DD00FADFE7 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		C72FAEDF2BB932E900FADFE7 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				C72FAEE22BB9342F00FADFE7 /* Remote */,
+				C72FAEE12BB9342600FADFE7 /* Repository */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		C72FAEE02BB932EE00FADFE7 /* Locker */ = {
+			isa = PBXGroup;
+			children = (
+				C72FAF032BB9B9AC00FADFE7 /* Remote */,
+				C72FAF042BB9B9B300FADFE7 /* Repository */,
+			);
+			path = Locker;
+			sourceTree = "<group>";
+		};
+		C72FAEE12BB9342600FADFE7 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				C72FAEFD2BB93A6000FADFE7 /* UserRepository.swift */,
+				C72FAEFF2BB95BE400FADFE7 /* UserRepositoryImpl.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		C72FAEE22BB9342F00FADFE7 /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+				C72FAEE42BB9346C00FADFE7 /* UserApi.swift */,
+				C72FAEFB2BB938B300FADFE7 /* UserApiImpl.swift */,
+				C72FAEE62BB9347000FADFE7 /* Dto */,
+			);
+			path = Remote;
+			sourceTree = "<group>";
+		};
+		C72FAEE62BB9347000FADFE7 /* Dto */ = {
+			isa = PBXGroup;
+			children = (
+				C72FAEE82BB9347D00FADFE7 /* Request */,
+				C72FAEE72BB9347700FADFE7 /* Response */,
+			);
+			path = Dto;
+			sourceTree = "<group>";
+		};
+		C72FAEE72BB9347700FADFE7 /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				C72FAEF92BB9389B00FADFE7 /* AuthenticationResponse.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		C72FAEE82BB9347D00FADFE7 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				C72FAEE92BB934E300FADFE7 /* AuthenticationRequest.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		C72FAEEB2BB9355400FADFE7 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				C72FAEEC2BB9358F00FADFE7 /* BaseResponse.swift */,
+				C72FAF172BB9C7DE00FADFE7 /* PlainResponse.swift */,
+				C72FAEEE2BB935B800FADFE7 /* NetworkError.swift */,
+				C72FAEF02BB935D300FADFE7 /* Constant.swift */,
+				C72FAEF72BB936BE00FADFE7 /* ApiRequest.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		C72FAEF22BB9367400FADFE7 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				C72FAEF32BB9367C00FADFE7 /* Keychain.swift */,
+				C72FAEF52BB9369F00FADFE7 /* DependencyInjector.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		C72FAF032BB9B9AC00FADFE7 /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+				C72FAF082BB9B9DE00FADFE7 /* LockerApi.swift */,
+				C72FAF062BB9B9D500FADFE7 /* LockerApiImpl.swift */,
+				C72FAF052BB9B9C600FADFE7 /* Dto */,
+			);
+			path = Remote;
+			sourceTree = "<group>";
+		};
+		C72FAF042BB9B9B300FADFE7 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				C72FAF0E2BB9BA0300FADFE7 /* LockerRepository.swift */,
+				C72FAF0C2BB9B9FB00FADFE7 /* LockerRepositoryImpl.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		C72FAF052BB9B9C600FADFE7 /* Dto */ = {
+			isa = PBXGroup;
+			children = (
+				C72FAF0B2BB9B9ED00FADFE7 /* Request */,
+				C72FAF0A2BB9B9E800FADFE7 /* Response */,
+			);
+			path = Dto;
+			sourceTree = "<group>";
+		};
+		C72FAF0A2BB9B9E800FADFE7 /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				C72FAF142BB9C35E00FADFE7 /* LockerResponse.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		C72FAF0B2BB9B9ED00FADFE7 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				C72FAF102BB9BE2A00FADFE7 /* AreaRequest.swift */,
+				C72FAF122BB9BE7400FADFE7 /* LockerIdRequest.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
 		C77A1E342BB41EAD006FE673 = {
 			isa = PBXGroup;
 			children = (
@@ -52,8 +239,12 @@
 		C77A1E3F2BB41EAE006FE673 /* LiLo */ = {
 			isa = PBXGroup;
 			children = (
+				C72FAEF22BB9367400FADFE7 /* Utils */,
+				C72FAEDD2BB932D700FADFE7 /* Data */,
+				C72FAEDE2BB932DD00FADFE7 /* Presentation */,
 				C77A1E402BB41EAE006FE673 /* LiLoApp.swift */,
 				C77A1E422BB41EAE006FE673 /* ContentView.swift */,
+				C72FAF012BB95D5000FADFE7 /* AppModule.swift */,
 				C77A1E442BB41EAF006FE673 /* Assets.xcassets */,
 				C77A1E462BB41EAF006FE673 /* LiLo.entitlements */,
 				C77A1E472BB41EAF006FE673 /* Preview Content */,
@@ -139,8 +330,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C72FAEFE2BB93A6000FADFE7 /* UserRepository.swift in Sources */,
+				C72FAEF12BB935D300FADFE7 /* Constant.swift in Sources */,
+				C72FAF002BB95BE400FADFE7 /* UserRepositoryImpl.swift in Sources */,
+				C72FAEF62BB9369F00FADFE7 /* DependencyInjector.swift in Sources */,
+				C72FAF152BB9C35E00FADFE7 /* LockerResponse.swift in Sources */,
+				C72FAF092BB9B9DE00FADFE7 /* LockerApi.swift in Sources */,
+				C72FAEED2BB9358F00FADFE7 /* BaseResponse.swift in Sources */,
+				C72FAEE52BB9346C00FADFE7 /* UserApi.swift in Sources */,
 				C77A1E432BB41EAE006FE673 /* ContentView.swift in Sources */,
+				C72FAEEF2BB935B800FADFE7 /* NetworkError.swift in Sources */,
+				C72FAF0F2BB9BA0300FADFE7 /* LockerRepository.swift in Sources */,
+				C72FAEF42BB9367C00FADFE7 /* Keychain.swift in Sources */,
 				C77A1E412BB41EAE006FE673 /* LiLoApp.swift in Sources */,
+				C72FAF072BB9B9D500FADFE7 /* LockerApiImpl.swift in Sources */,
+				C72FAEF82BB936BE00FADFE7 /* ApiRequest.swift in Sources */,
+				C72FAF182BB9C7DE00FADFE7 /* PlainResponse.swift in Sources */,
+				C72FAF112BB9BE2A00FADFE7 /* AreaRequest.swift in Sources */,
+				C72FAF132BB9BE7400FADFE7 /* LockerIdRequest.swift in Sources */,
+				C72FAF022BB95D5000FADFE7 /* AppModule.swift in Sources */,
+				C72FAEFA2BB9389B00FADFE7 /* AuthenticationResponse.swift in Sources */,
+				C72FAEEA2BB934E300FADFE7 /* AuthenticationRequest.swift in Sources */,
+				C72FAEFC2BB938B300FADFE7 /* UserApiImpl.swift in Sources */,
+				C72FAF0D2BB9B9FB00FADFE7 /* LockerRepositoryImpl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

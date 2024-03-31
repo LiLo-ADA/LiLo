@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+protocol UserApi {
+    func authenticate(
+        request: AuthenticationRequest
+    ) async -> Result<String, Error>
+}
