@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-class HomeViewModel: ObservableObject {
+@MainActor class HomeViewModel: ObservableObject {
     @Published var state = HomeState()
     @Inject var lockerRepository: LockerRepository
     @AppStorage("isUsingLocker") var isUsingLocker: Bool = false
@@ -17,11 +17,7 @@ class HomeViewModel: ObservableObject {
         if isUsingLocker {
             fetchLocker()
         } else {
-            // getLockers()
-            state.areaA.lockers = Dummy.lockers
-            state.areaB.lockers = Dummy.lockers
-            state.areaC.lockers = Dummy.lockers
-            state.areaD.lockers = Dummy.lockers
+             getLockers()
         }
     }
     
@@ -148,7 +144,7 @@ class HomeViewModel: ObservableObject {
                 
                 newLockers.append(newSelectedLocker)
                 newLockers.sort(
-                    by: { a, b in a.number < a.number}
+                    by: { a, b in a.number < b.number}
                 )
                 
                 switch state.selectedArea {
@@ -217,7 +213,7 @@ class HomeViewModel: ObservableObject {
                 
                 newLockers.append(newSelectedLocker)
                 newLockers.sort(
-                    by: { a, b in a.number < a.number}
+                    by: { a, b in a.number < b.number}
                 )
                 
                 switch state.selectedArea {
@@ -269,6 +265,7 @@ class HomeViewModel: ObservableObject {
                     state.areaA.isLoading = true
                     
                     await fetchLockers(
+                        area: .AreaA,
                         saveResult: { result in
                             state.areaA.isLoading = false
                             state.areaA.lockers = result
@@ -287,6 +284,7 @@ class HomeViewModel: ObservableObject {
                     state.areaB.isLoading = true
                     
                     await fetchLockers(
+                        area: .AreaB,
                         saveResult: { result in
                             state.areaB.isLoading = false
                             state.areaB.lockers = result
@@ -305,6 +303,7 @@ class HomeViewModel: ObservableObject {
                     state.areaC.isLoading = true
                     
                     await fetchLockers(
+                        area: .AreaC,
                         saveResult: { result in
                             state.areaC.isLoading = false
                             state.areaC.lockers = result
@@ -323,6 +322,7 @@ class HomeViewModel: ObservableObject {
                     state.areaD.isLoading = true
                     
                     await fetchLockers(
+                        area: .AreaD,
                         saveResult: { result in
                             state.areaD.isLoading = false
                             state.areaD.lockers = result
@@ -339,16 +339,18 @@ class HomeViewModel: ObservableObject {
     }
     
     private func fetchLockers(
+        area: Area? = nil,
         saveResult: ([LockerResponse]) -> Void,
         errorResult: (String) -> Void
     ) async {
         let result = await lockerRepository
-            .getLockersByArea(area: state.selectedArea.rawValue)
+            .getLockersByArea(area: area?.rawValue ?? state.selectedArea.rawValue)
         
         switch result {
         case .success(let result):
             saveResult(result)
         case .failure(let error):
+            print(error)
             errorResult(error.localizedDescription)
         }
     }

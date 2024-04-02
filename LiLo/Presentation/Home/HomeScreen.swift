@@ -13,7 +13,14 @@ struct HomeScreen: View {
     var body: some View {
         ZStack {
             if viewModel.isUsingLocker {
-                
+                LockOutView(
+                    state: $viewModel.state,
+                    onEvent: { event in
+                        viewModel.onEvent(
+                            event: event
+                        )
+                    }
+                )
             } else {
                 LockInView(
                     state: $viewModel.state,

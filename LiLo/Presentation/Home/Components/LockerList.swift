@@ -18,8 +18,8 @@ struct LockerList: View {
     
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
-            VStack(spacing: 10) {
-                if !lockers.isEmpty {
+            if !lockers.isEmpty {
+                VStack(spacing: 10) {
                     LazyHStack(spacing: 10) {
                         ForEach(lockers[0..<horizontalCount]) { locker in
                               LockerView(
@@ -62,15 +62,15 @@ struct LockerList: View {
                     }
                     .frame(height: 58)
                 }
-            }
-            .padding(10)
-            .clipShape(RoundedRectangle(cornerRadius: 10))
-            .background(
-                Color.lightGrey.clipShape(
-                    RoundedRectangle(cornerRadius: 10)
+                .padding(10)
+                .clipShape(RoundedRectangle(cornerRadius: 10))
+                .background(
+                    Color.lightGrey.clipShape(
+                        RoundedRectangle(cornerRadius: 10)
+                    )
                 )
-            )
-            .padding(.horizontal, 16)
+                .padding(.horizontal, 16)
+            }
         }
     }
 }
