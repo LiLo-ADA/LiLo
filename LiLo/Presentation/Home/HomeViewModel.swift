@@ -46,6 +46,11 @@ import SwiftUI
             state.showReportAlert = false
         case .ShowReportAlert:
             state.showReportAlert = true
+        case .AuthenticationError(message: let message):
+            Task {
+                state.error = message
+                state.showErrorAlert = true
+            }
         }
     }
     

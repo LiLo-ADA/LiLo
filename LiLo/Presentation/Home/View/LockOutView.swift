@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import LocalAuthentication
 
 struct LockOutView: View {
     @Binding var state: HomeState
@@ -83,7 +84,8 @@ struct LockOutView: View {
                             .fontWeight(.semibold),
                         action: {
                             onEvent(.DismissConfirmationAlert)
-                            onEvent(.LockOut)
+                            //onEvent(.LockOut)
+                            authenticate()
                         }
                     )
                 )
@@ -91,6 +93,35 @@ struct LockOutView: View {
         }
         .padding(.vertical, 24)
         .padding(.horizontal, 16)
+    }
+    
+    func authenticate() {
+        let context = LAContext()
+        var error: NSError?
+
+        if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error) {
+            let reason = "Make sure that you're managing you own locker"
+
+            context.evaluatePolicy(
+                .deviceOwnerAuthenticationWithBiometrics,
+                localizedReason: reason
+            ) { success, authenticationError in
+                if success {
+                    onEvent(
+                        .LockOut
+                    )
+                } else {
+                    print(authenticationError?.localizedDescription ?? "Verification failed")
+//                    onEvent(
+//                        .AuthenticationError(message: authenticationError?.localizedDescription ?? "We can't verify your identity")
+//                    )
+                }
+            }
+        } else {
+            onEvent(
+                .AuthenticationError(message: error?.localizedDescription ?? "Please, make sure to enable biometrics verification")
+            )
+        }
     }
 }
 

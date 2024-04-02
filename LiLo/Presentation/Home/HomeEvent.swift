@@ -19,4 +19,5 @@ enum HomeEvent {
     case ShowConfirmationAlert
     case DismissReportAlert
     case ShowReportAlert
+    case AuthenticationError(message: String)
 }
