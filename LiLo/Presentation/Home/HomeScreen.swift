@@ -8,11 +8,47 @@
 import SwiftUI
 
 struct HomeScreen: View {
+    @StateObject private var viewModel: HomeViewModel = HomeViewModel()
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack {
+            if viewModel.isUsingLocker {
+                
+            } else {
+                LockInView(
+                    state: $viewModel.state,
+                    onEvent: { event in
+                        viewModel.onEvent(
+                            event: event
+                        )
+                    }
+                )
+            }
+        }
+        .toolbar {
+            ToolbarItem(placement: .topBarTrailing) {
+                HStack(spacing: 6) {
+                    CircleButton(
+                        iconName: "lock.fill",
+                        onClick: {
+                            
+                        }
+                    )
+                    
+                    CircleButton(
+                        iconName: "questionmark",
+                        onClick: {
+                            
+                        }
+                    )
+                }
+            }
+        }
     }
 }
 
 #Preview {
-    HomeScreen()
+    NavigationStack {
+        HomeScreen()
+    }
 }

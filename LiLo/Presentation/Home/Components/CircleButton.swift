@@ -8,11 +8,36 @@
 import SwiftUI
 
 struct CircleButton: View {
+    let iconName: String
+    let onClick: () -> Void
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Button {
+            onClick()
+        } label: {
+            ZStack {
+                Image(systemName: iconName)
+                    .resizable()
+                    .scaledToFit()
+                    .frame(
+                        height: 17
+                    )
+                    .foregroundColor(.black)
+            }
+            .frame(width: 36, height: 36)
+            .clipShape(Circle())
+            .contentShape(Circle())
+            .overlay {
+                Circle()
+                    .stroke(.grey, lineWidth: 2)
+            }
+        }
     }
 }
 
 #Preview {
-    CircleButton()
+    CircleButton(
+        iconName: "lock.fill",
+        onClick: {  }
+    )
 }

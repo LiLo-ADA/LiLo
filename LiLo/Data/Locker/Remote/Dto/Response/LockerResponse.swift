@@ -7,11 +7,10 @@
 
 import Foundation
 
-struct LockerResponse: Codable {
+struct LockerResponse: Codable, Identifiable {
     let id: String
     let area: String
     let number: Int
-    let status: Int
-    let reportCount: Int
-    let password: String?
+    var status: Int
+    var reportCount: Int
 }

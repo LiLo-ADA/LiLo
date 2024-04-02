@@ -13,7 +13,16 @@ class Dummy {
         area: "A",
         number: 1,
         status: 1,
-        reportCount: 0,
-        password: nil
+        reportCount: 0
     )
+    
+    static let lockers: [LockerResponse] = (1...27).map { i in
+        .init(
+            id: "\(i)",
+            area: "A",
+            number: i,
+            status: 1,
+            reportCount: 0
+        )
+    }
 }

@@ -9,13 +9,9 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "applelogo")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, team 5!")
+        NavigationStack {
+            HomeScreen()
         }
-        .padding()
     }
 }
 

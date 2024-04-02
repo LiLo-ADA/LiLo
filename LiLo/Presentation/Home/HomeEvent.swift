@@ -9,11 +9,14 @@ import Foundation
 
 enum HomeEvent {
     case SelectArea(area: Area)
+    case Refresh
     case SelectLocker(locker: LockerResponse)
     case LockIn
-    case Report
+    case LockOut
+    case ReportFilled
+    case ReportEmpty
     case DismissConfirmationAlert
     case ShowConfirmationAlert
     case DismissReportAlert
-    case ShowDismissAlert
+    case ShowReportAlert
 }

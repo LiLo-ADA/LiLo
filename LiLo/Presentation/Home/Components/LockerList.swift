@@ -8,11 +8,77 @@
 import SwiftUI
 
 struct LockerList: View {
+    let lockers: [LockerResponse]
+    let selectedLocker: LockerResponse?
+    let onClick: (LockerResponse) -> Void
+    
+    private var horizontalCount: Int {
+        lockers.count / 3
+    }
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ScrollView(.horizontal, showsIndicators: false) {
+            VStack(spacing: 10) {
+                if !lockers.isEmpty {
+                    LazyHStack(spacing: 10) {
+                        ForEach(lockers[0..<horizontalCount]) { locker in
+                              LockerView(
+                                locker: locker,
+                                isSelected: selectedLocker?.id == locker.id,
+                                onClick: {
+                                    onClick(locker)
+                                }
+                              )
+                         }
+                         .listStyle(.plain)
+                    }
+                    .frame(height: 58)
+                    
+                    LazyHStack(spacing: 10) {
+                         ForEach(lockers[horizontalCount..<(horizontalCount * 2)]) { locker in
+                             LockerView(
+                               locker: locker,
+                               isSelected: selectedLocker?.id == locker.id,
+                               onClick: {
+                                   onClick(locker)
+                               }
+                             )
+                         }
+                         .listStyle(.plain)
+                    }
+                    .frame(height: 58)
+                    
+                    LazyHStack(spacing: 10) {
+                        ForEach(lockers[(horizontalCount * 2)..<(horizontalCount * 3)]) { locker in
+                            LockerView(
+                              locker: locker,
+                              isSelected: selectedLocker?.id == locker.id,
+                              onClick: {
+                                  onClick(locker)
+                              }
+                            )
+                         }
+                         .listStyle(.plain)
+                    }
+                    .frame(height: 58)
+                }
+            }
+            .padding(10)
+            .clipShape(RoundedRectangle(cornerRadius: 10))
+            .background(
+                Color.lightGrey.clipShape(
+                    RoundedRectangle(cornerRadius: 10)
+                )
+            )
+            .padding(.horizontal, 16)
+        }
     }
 }
 
 #Preview {
-    LockerList()
+    LockerList(
+        lockers: Dummy.lockers,
+        selectedLocker: Dummy.locker,
+        onClick: { _ in }
+    )
 }

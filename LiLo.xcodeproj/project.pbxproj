@@ -32,6 +32,20 @@
 		C77A1E432BB41EAE006FE673 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77A1E422BB41EAE006FE673 /* ContentView.swift */; };
 		C77A1E452BB41EAF006FE673 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C77A1E442BB41EAF006FE673 /* Assets.xcassets */; };
 		C77A1E492BB41EAF006FE673 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C77A1E482BB41EAF006FE673 /* Preview Assets.xcassets */; };
+		C7A9BBA42BBB976600FFDFC6 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A9BBA32BBB976600FFDFC6 /* HomeViewModel.swift */; };
+		C7A9BBA62BBB976D00FFDFC6 /* HomeEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A9BBA52BBB976D00FFDFC6 /* HomeEvent.swift */; };
+		C7A9BBA82BBB977400FFDFC6 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A9BBA72BBB977400FFDFC6 /* HomeScreen.swift */; };
+		C7A9BBAA2BBB979800FFDFC6 /* HomeState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A9BBA92BBB979800FFDFC6 /* HomeState.swift */; };
+		C7A9BBAE2BBBA91400FFDFC6 /* Area.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A9BBAD2BBBA91400FFDFC6 /* Area.swift */; };
+		C7A9BBB02BBBFAD900FFDFC6 /* CircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A9BBAF2BBBFAD900FFDFC6 /* CircleButton.swift */; };
+		C7A9BBB22BBC01C700FFDFC6 /* LockInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A9BBB12BBC01C700FFDFC6 /* LockInView.swift */; };
+		C7A9BBB42BBC01CF00FFDFC6 /* LockOutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A9BBB32BBC01CF00FFDFC6 /* LockOutView.swift */; };
+		C7A9BBB72BBC021E00FFDFC6 /* AreaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A9BBB62BBC021E00FFDFC6 /* AreaView.swift */; };
+		C7A9BBB92BBC087900FFDFC6 /* AreaRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A9BBB82BBC087900FFDFC6 /* AreaRow.swift */; };
+		C7A9BBBC2BBC0AB800FFDFC6 /* FontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A9BBBB2BBC0AB800FFDFC6 /* FontExtension.swift */; };
+		C7A9BBBE2BBC0EC500FFDFC6 /* LockerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A9BBBD2BBC0EC500FFDFC6 /* LockerView.swift */; };
+		C7A9BBC02BBC0EE400FFDFC6 /* Dummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A9BBBF2BBC0EE400FFDFC6 /* Dummy.swift */; };
+		C7A9BBC22BBC102E00FFDFC6 /* LockerList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A9BBC12BBC102E00FFDFC6 /* LockerList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +76,20 @@
 		C77A1E442BB41EAF006FE673 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C77A1E462BB41EAF006FE673 /* LiLo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LiLo.entitlements; sourceTree = "<group>"; };
 		C77A1E482BB41EAF006FE673 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C7A9BBA32BBB976600FFDFC6 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		C7A9BBA52BBB976D00FFDFC6 /* HomeEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeEvent.swift; sourceTree = "<group>"; };
+		C7A9BBA72BBB977400FFDFC6 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
+		C7A9BBA92BBB979800FFDFC6 /* HomeState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeState.swift; sourceTree = "<group>"; };
+		C7A9BBAD2BBBA91400FFDFC6 /* Area.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Area.swift; sourceTree = "<group>"; };
+		C7A9BBAF2BBBFAD900FFDFC6 /* CircleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButton.swift; sourceTree = "<group>"; };
+		C7A9BBB12BBC01C700FFDFC6 /* LockInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockInView.swift; sourceTree = "<group>"; };
+		C7A9BBB32BBC01CF00FFDFC6 /* LockOutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockOutView.swift; sourceTree = "<group>"; };
+		C7A9BBB62BBC021E00FFDFC6 /* AreaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaView.swift; sourceTree = "<group>"; };
+		C7A9BBB82BBC087900FFDFC6 /* AreaRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaRow.swift; sourceTree = "<group>"; };
+		C7A9BBBB2BBC0AB800FFDFC6 /* FontExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontExtension.swift; sourceTree = "<group>"; };
+		C7A9BBBD2BBC0EC500FFDFC6 /* LockerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockerView.swift; sourceTree = "<group>"; };
+		C7A9BBBF2BBC0EE400FFDFC6 /* Dummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dummy.swift; sourceTree = "<group>"; };
+		C7A9BBC12BBC102E00FFDFC6 /* LockerList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockerList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +116,8 @@
 		C72FAEDE2BB932DD00FADFE7 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				C7A9BBBA2BBC0AB000FFDFC6 /* Theme */,
+				C7A9BBA22BBB975200FFDFC6 /* Home */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -171,6 +201,7 @@
 			children = (
 				C72FAEF32BB9367C00FADFE7 /* Keychain.swift */,
 				C72FAEF52BB9369F00FADFE7 /* DependencyInjector.swift */,
+				C7A9BBBF2BBC0EE400FFDFC6 /* Dummy.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -239,6 +270,7 @@
 		C77A1E3F2BB41EAE006FE673 /* LiLo */ = {
 			isa = PBXGroup;
 			children = (
+				C7A9BBC32BBC209700FFDFC6 /* Resources */,
 				C72FAEF22BB9367400FADFE7 /* Utils */,
 				C72FAEDD2BB932D700FADFE7 /* Data */,
 				C72FAEDE2BB932DD00FADFE7 /* Presentation */,
@@ -258,6 +290,72 @@
 				C77A1E482BB41EAF006FE673 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		C7A9BBA22BBB975200FFDFC6 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				C7A9BBB52BBC020200FFDFC6 /* View */,
+				C7A9BBAC2BBBA90E00FFDFC6 /* Model */,
+				C7A9BBAB2BBB97B900FFDFC6 /* Components */,
+				C7A9BBA32BBB976600FFDFC6 /* HomeViewModel.swift */,
+				C7A9BBA52BBB976D00FFDFC6 /* HomeEvent.swift */,
+				C7A9BBA72BBB977400FFDFC6 /* HomeScreen.swift */,
+				C7A9BBA92BBB979800FFDFC6 /* HomeState.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		C7A9BBAB2BBB97B900FFDFC6 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				C7A9BBAF2BBBFAD900FFDFC6 /* CircleButton.swift */,
+				C7A9BBB62BBC021E00FFDFC6 /* AreaView.swift */,
+				C7A9BBB82BBC087900FFDFC6 /* AreaRow.swift */,
+				C7A9BBBD2BBC0EC500FFDFC6 /* LockerView.swift */,
+				C7A9BBC12BBC102E00FFDFC6 /* LockerList.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		C7A9BBAC2BBBA90E00FFDFC6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C7A9BBAD2BBBA91400FFDFC6 /* Area.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C7A9BBB52BBC020200FFDFC6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C7A9BBB12BBC01C700FFDFC6 /* LockInView.swift */,
+				C7A9BBB32BBC01CF00FFDFC6 /* LockOutView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C7A9BBBA2BBC0AB000FFDFC6 /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				C7A9BBBB2BBC0AB800FFDFC6 /* FontExtension.swift */,
+			);
+			path = Theme;
+			sourceTree = "<group>";
+		};
+		C7A9BBC32BBC209700FFDFC6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C7A9BBC42BBC209C00FFDFC6 /* fonts */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		C7A9BBC42BBC209C00FFDFC6 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -336,22 +434,36 @@
 				C72FAEF62BB9369F00FADFE7 /* DependencyInjector.swift in Sources */,
 				C72FAF152BB9C35E00FADFE7 /* LockerResponse.swift in Sources */,
 				C72FAF092BB9B9DE00FADFE7 /* LockerApi.swift in Sources */,
+				C7A9BBB92BBC087900FFDFC6 /* AreaRow.swift in Sources */,
+				C7A9BBA82BBB977400FFDFC6 /* HomeScreen.swift in Sources */,
+				C7A9BBC22BBC102E00FFDFC6 /* LockerList.swift in Sources */,
+				C7A9BBA62BBB976D00FFDFC6 /* HomeEvent.swift in Sources */,
+				C7A9BBB22BBC01C700FFDFC6 /* LockInView.swift in Sources */,
 				C72FAEED2BB9358F00FADFE7 /* BaseResponse.swift in Sources */,
 				C72FAEE52BB9346C00FADFE7 /* UserApi.swift in Sources */,
 				C77A1E432BB41EAE006FE673 /* ContentView.swift in Sources */,
 				C72FAEEF2BB935B800FADFE7 /* NetworkError.swift in Sources */,
 				C72FAF0F2BB9BA0300FADFE7 /* LockerRepository.swift in Sources */,
 				C72FAEF42BB9367C00FADFE7 /* Keychain.swift in Sources */,
+				C7A9BBB42BBC01CF00FFDFC6 /* LockOutView.swift in Sources */,
 				C77A1E412BB41EAE006FE673 /* LiLoApp.swift in Sources */,
 				C72FAF072BB9B9D500FADFE7 /* LockerApiImpl.swift in Sources */,
 				C72FAEF82BB936BE00FADFE7 /* ApiRequest.swift in Sources */,
 				C72FAF182BB9C7DE00FADFE7 /* PlainResponse.swift in Sources */,
 				C72FAF112BB9BE2A00FADFE7 /* AreaRequest.swift in Sources */,
 				C72FAF132BB9BE7400FADFE7 /* LockerIdRequest.swift in Sources */,
+				C7A9BBB02BBBFAD900FFDFC6 /* CircleButton.swift in Sources */,
 				C72FAF022BB95D5000FADFE7 /* AppModule.swift in Sources */,
+				C7A9BBA42BBB976600FFDFC6 /* HomeViewModel.swift in Sources */,
+				C7A9BBAE2BBBA91400FFDFC6 /* Area.swift in Sources */,
+				C7A9BBAA2BBB979800FFDFC6 /* HomeState.swift in Sources */,
 				C72FAEFA2BB9389B00FADFE7 /* AuthenticationResponse.swift in Sources */,
 				C72FAEEA2BB934E300FADFE7 /* AuthenticationRequest.swift in Sources */,
+				C7A9BBBE2BBC0EC500FFDFC6 /* LockerView.swift in Sources */,
+				C7A9BBBC2BBC0AB800FFDFC6 /* FontExtension.swift in Sources */,
+				C7A9BBB72BBC021E00FFDFC6 /* AreaView.swift in Sources */,
 				C72FAEFC2BB938B300FADFE7 /* UserApiImpl.swift in Sources */,
+				C7A9BBC02BBC0EE400FFDFC6 /* Dummy.swift in Sources */,
 				C72FAF0D2BB9B9FB00FADFE7 /* LockerRepositoryImpl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

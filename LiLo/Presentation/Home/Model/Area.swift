@@ -6,3 +6,10 @@
 //
 
 import Foundation
+
+enum Area: String, CaseIterable {
+    case AreaA = "A"
+    case AreaB = "B"
+    case AreaC = "C"
+    case AreaD = "D"
+}
