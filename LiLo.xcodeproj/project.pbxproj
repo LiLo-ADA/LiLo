@@ -114,12 +114,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		C7179C342BBCF49D0041E1AB /* Guidelines */ = {
+		C7179C342BBCF49D0041E1AB /* GuidelinesInApp */ = {
 			isa = PBXGroup;
 			children = (
 				635D1DB22BBCE1C700BAA5D3 /* GuidelinesInAppView.swift */,
 			);
-			path = Guidelines;
+			path = GuidelinesInApp;
+			sourceTree = "<group>";
+		};
+		C7179C372BBD6DBD0041E1AB /* GuidelinesIntro */ = {
+			isa = PBXGroup;
+			children = (
+				A70CBC402BBD0C7F002EDCC5 /* GuidelinesIntroView.swift */,
+			);
+			path = GuidelinesIntro;
 			sourceTree = "<group>";
 		};
 		C72FAEDD2BB932D700FADFE7 /* Data */ = {
@@ -137,7 +145,8 @@
 			children = (
 				C7A9BBBA2BBC0AB000FFDFC6 /* Theme */,
 				C7A9BBA22BBB975200FFDFC6 /* Home */,
-				C7179C342BBCF49D0041E1AB /* Guidelines */,
+				C7179C342BBCF49D0041E1AB /* GuidelinesInApp */,
+				C7179C372BBD6DBD0041E1AB /* GuidelinesIntro */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -354,8 +363,6 @@
 			children = (
 				C7A9BBB12BBC01C700FFDFC6 /* LockInView.swift */,
 				C7A9BBB32BBC01CF00FFDFC6 /* LockOutView.swift */,
-				635D1DB22BBCE1C700BAA5D3 /* GuidelinesInAppView.swift */,
-				A70CBC402BBD0C7F002EDCC5 /* GuidelinesIntroView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";

@@ -10,6 +10,7 @@ import SwiftUI
 struct GuidelinesIntroView: View {
     @State var isButtonEnabled = false
     @State var countdown = 5
+    @State var isLoading: Bool = false
     
     var body: some View {
         ScrollView(showsIndicators: false) {
@@ -75,21 +76,29 @@ struct GuidelinesIntroView: View {
                     }
     
                     VStack(spacing: 8){
-                        NavigationLink {
-                            HomeScreen()
+                        Button {
+                            done()
                         } label: {
-                            Text("I Understand")
-                                .font(.Headline)
-                                .foregroundColor(.white)
-                                .frame(maxWidth: .infinity, minHeight: 48)
+                            HStack {
+                                if isLoading {
+                                    ProgressView()
+                                } else {
+                                    Text("I Understand")
+                                        .font(.Headline)
+                                        .foregroundColor(.white)
+                                }
+                            }
+                            .frame(maxWidth: .infinity, minHeight: 48)
+                            .background((isButtonEnabled && !isLoading) ? .darkTosca : .grey)
+                            .clipShape(RoundedRectangle(cornerRadius: 10))
+                            .contentShape(RoundedRectangle(cornerRadius: 10))
+                            .padding(.horizontal, 16)
+                            .buttonStyle(.plain)
+                            .buttonBorderShape(
+                                .roundedRectangle(radius: 10)
+                            )
                         }
-                        .tint(Color.darkTosca)
-                        .padding(.horizontal, 16)
-                        .buttonStyle(.borderedProminent)
-                        .buttonBorderShape(
-                            .roundedRectangle(radius: 10)
-                        )
-                        .disabled(!isButtonEnabled)
+                        .disabled(!isButtonEnabled || isLoading)
                         
                         if countdown != 0 {
                             Text("\(countdown)s")
@@ -116,6 +125,15 @@ struct GuidelinesIntroView: View {
                 
                 Spacer()
             }.padding(16)
+        }
+    }
+    
+    private func done() {
+        Task {
+            isLoading = true
+//            let userDefaults = UserDefaults.standard
+//            userDefaults.set(false, forKey: "showGuidelines")
+//            isLoading = false
         }
     }
 }

@@ -8,9 +8,16 @@
 import SwiftUI
 
 struct ContentView: View {
+    @AppStorage("isLogin") var isLogin: Bool = false
+    @AppStorage("showGuidelines") var showGuidelines: Bool = true
+    
     var body: some View {
-        NavigationStack {
-            HomeScreen()
+        if showGuidelines {
+            GuidelinesIntroView()
+        } else {
+            NavigationStack {
+                HomeScreen()
+            }
         }
     }
 }
