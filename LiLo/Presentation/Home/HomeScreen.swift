@@ -32,13 +32,41 @@ struct HomeScreen: View {
                 )
             }
         }
+        .sheet(
+            isPresented: $viewModel.state.showPasswordSheet
+        ) {
+            PasswordSheet(
+                text: Binding(
+                    get: {
+                        viewModel.password
+                    },
+                    set: { newPassword in
+                        viewModel.onEvent(
+                            event: .OnPasswordChange(
+                                password: newPassword
+                            )
+                        )
+                    }
+                ),
+                showPassword: viewModel.state.showPassword,
+                onEvent: { event in
+                    viewModel.onEvent(
+                        event: event
+                    )
+                }
+            )
+            .ignoresSafeArea(.keyboard, edges: .bottom)
+            .presentationDetents([.fraction(0.3)])
+        }
         .toolbar {
             ToolbarItem(placement: .topBarTrailing) {
                 HStack(spacing: 6) {
                     CircleButton(
                         iconName: "lock.fill",
                         onClick: {
-                            
+                            viewModel.onEvent(
+                                event: .ShowPasswordSheet
+                            )
                         }
                     )
                     

@@ -17,6 +17,8 @@ struct HomeState {
     var selectedLocker: LockerResponse? = nil
     var showConfirmationAlert: Bool = false
     var showReportAlert: Bool = false
+    var showPasswordSheet: Bool = false
+    var showPassword: Bool = false
     var isLoading: Bool = false
     var error: String? = nil
     var showErrorAlert: Bool = false

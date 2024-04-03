@@ -43,6 +43,21 @@ struct LockInView: View {
                 Spacer()
                     .frame(height: 24)
                 
+                HStack {
+                    Text(
+                        Area.getPlace(
+                            area: state.selectedArea
+                        )
+                    )
+                    .font(.Headline)
+                    
+                    Spacer()
+                }
+                .padding(.horizontal, 16)
+                
+                Spacer()
+                    .frame(height: 12)
+                
                 LockerList(
                     lockers: lockers,
                     selectedLocker: state.selectedLocker,

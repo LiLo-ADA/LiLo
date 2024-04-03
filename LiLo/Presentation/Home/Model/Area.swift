@@ -12,4 +12,19 @@ enum Area: String, CaseIterable {
     case AreaB = "B"
     case AreaC = "C"
     case AreaD = "D"
+    
+    static func getPlace(
+        area: Area
+    ) -> String {
+        switch area {
+        case .AreaA:
+            return "Front Aisle"
+        case .AreaB:
+            return "Middle Aisle"
+        case .AreaC:
+            return "Side Pantry"
+        case .AreaD:
+            return "Middle Pantry"
+        }
+    }
 }

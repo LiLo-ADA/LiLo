@@ -12,12 +12,19 @@ import SwiftUI
     @Published var state = HomeState()
     @Inject var lockerRepository: LockerRepository
     @AppStorage("isUsingLocker") var isUsingLocker: Bool = false
+    private let keychain = KeychainSwift.shared
+    
+    @Published var password: String = ""
     
     init() {
         if isUsingLocker {
             fetchLocker()
         } else {
              getLockers()
+        }
+        
+        Task {
+            password = keychain.get("password") ?? ""
         }
     }
     
@@ -50,6 +57,24 @@ import SwiftUI
             Task {
                 state.error = message
                 state.showErrorAlert = true
+            }
+        case .ShowPasswordSheet:
+            Task {
+                state.showPasswordSheet = true
+            }
+        case .TogglePasswordVisible:
+            Task {
+                state.showPassword.toggle()
+            }
+        case .OnPasswordChange(password: let password):
+            Task {
+                self.password = password
+                keychain.set(password, forKey: "password")
+            }
+        case .OnDone:
+            Task {
+                state.showPasswordSheet = false
+                state.showPassword = false
             }
         }
     }

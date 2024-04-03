@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C7179C312BBCE10F0041E1AB /* PasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7179C302BBCE10F0041E1AB /* PasswordTextField.swift */; };
+		C7179C332BBCE20E0041E1AB /* PasswordSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7179C322BBCE20E0041E1AB /* PasswordSheet.swift */; };
 		C72FAEE52BB9346C00FADFE7 /* UserApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72FAEE42BB9346C00FADFE7 /* UserApi.swift */; };
 		C72FAEEA2BB934E300FADFE7 /* AuthenticationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72FAEE92BB934E300FADFE7 /* AuthenticationRequest.swift */; };
 		C72FAEED2BB9358F00FADFE7 /* BaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72FAEEC2BB9358F00FADFE7 /* BaseResponse.swift */; };
@@ -50,6 +52,8 @@
 
 /* Begin PBXFileReference section */
 		C70D05782BBC38560022C5DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		C7179C302BBCE10F0041E1AB /* PasswordTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordTextField.swift; sourceTree = "<group>"; };
+		C7179C322BBCE20E0041E1AB /* PasswordSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordSheet.swift; sourceTree = "<group>"; };
 		C72FAEE42BB9346C00FADFE7 /* UserApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserApi.swift; sourceTree = "<group>"; };
 		C72FAEE92BB934E300FADFE7 /* AuthenticationRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationRequest.swift; sourceTree = "<group>"; };
 		C72FAEEC2BB9358F00FADFE7 /* BaseResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseResponse.swift; sourceTree = "<group>"; };
@@ -316,6 +320,8 @@
 				C7A9BBB82BBC087900FFDFC6 /* AreaRow.swift */,
 				C7A9BBBD2BBC0EC500FFDFC6 /* LockerView.swift */,
 				C7A9BBC12BBC102E00FFDFC6 /* LockerList.swift */,
+				C7179C302BBCE10F0041E1AB /* PasswordTextField.swift */,
+				C7179C322BBCE20E0041E1AB /* PasswordSheet.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -436,6 +442,7 @@
 				C72FAEF62BB9369F00FADFE7 /* DependencyInjector.swift in Sources */,
 				C72FAF152BB9C35E00FADFE7 /* LockerResponse.swift in Sources */,
 				C72FAF092BB9B9DE00FADFE7 /* LockerApi.swift in Sources */,
+				C7179C312BBCE10F0041E1AB /* PasswordTextField.swift in Sources */,
 				C7A9BBB92BBC087900FFDFC6 /* AreaRow.swift in Sources */,
 				C7A9BBA82BBB977400FFDFC6 /* HomeScreen.swift in Sources */,
 				C7A9BBC22BBC102E00FFDFC6 /* LockerList.swift in Sources */,
@@ -447,6 +454,7 @@
 				C72FAEEF2BB935B800FADFE7 /* NetworkError.swift in Sources */,
 				C72FAF0F2BB9BA0300FADFE7 /* LockerRepository.swift in Sources */,
 				C72FAEF42BB9367C00FADFE7 /* Keychain.swift in Sources */,
+				C7179C332BBCE20E0041E1AB /* PasswordSheet.swift in Sources */,
 				C7A9BBB42BBC01CF00FFDFC6 /* LockOutView.swift in Sources */,
 				C77A1E412BB41EAE006FE673 /* LiLoApp.swift in Sources */,
 				C72FAF072BB9B9D500FADFE7 /* LockerApiImpl.swift in Sources */,

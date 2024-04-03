@@ -19,5 +19,9 @@ enum HomeEvent {
     case ShowConfirmationAlert
     case DismissReportAlert
     case ShowReportAlert
+    case ShowPasswordSheet
     case AuthenticationError(message: String)
+    case OnPasswordChange(password: String)
+    case TogglePasswordVisible
+    case OnDone
 }
