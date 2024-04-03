@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		635D1DB32BBCE1C700BAA5D3 /* GuidelinesInAppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635D1DB22BBCE1C700BAA5D3 /* GuidelinesInAppView.swift */; };
+		A70CBC412BBD0C7F002EDCC5 /* GuidelinesIntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70CBC402BBD0C7F002EDCC5 /* GuidelinesIntroView.swift */; };
 		C7179C312BBCE10F0041E1AB /* PasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7179C302BBCE10F0041E1AB /* PasswordTextField.swift */; };
 		C7179C332BBCE20E0041E1AB /* PasswordSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7179C322BBCE20E0041E1AB /* PasswordSheet.swift */; };
 		C7179C362BBCF4C60041E1AB /* CircleNavigationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7179C352BBCF4C60041E1AB /* CircleNavigationButton.swift */; };
@@ -54,6 +55,7 @@
 
 /* Begin PBXFileReference section */
 		635D1DB22BBCE1C700BAA5D3 /* GuidelinesInAppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuidelinesInAppView.swift; sourceTree = "<group>"; };
+		A70CBC402BBD0C7F002EDCC5 /* GuidelinesIntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuidelinesIntroView.swift; sourceTree = "<group>"; };
 		C70D05782BBC38560022C5DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		C7179C302BBCE10F0041E1AB /* PasswordTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordTextField.swift; sourceTree = "<group>"; };
 		C7179C322BBCE20E0041E1AB /* PasswordSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordSheet.swift; sourceTree = "<group>"; };
@@ -352,6 +354,8 @@
 			children = (
 				C7A9BBB12BBC01C700FFDFC6 /* LockInView.swift */,
 				C7A9BBB32BBC01CF00FFDFC6 /* LockOutView.swift */,
+				635D1DB22BBCE1C700BAA5D3 /* GuidelinesInAppView.swift */,
+				A70CBC402BBD0C7F002EDCC5 /* GuidelinesIntroView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -473,6 +477,7 @@
 				C7A9BBBC2BBC0AB800FFDFC6 /* FontExtension.swift in Sources */,
 				C7A9BBB72BBC021E00FFDFC6 /* AreaView.swift in Sources */,
 				C72FAEFC2BB938B300FADFE7 /* UserApiImpl.swift in Sources */,
+				A70CBC412BBD0C7F002EDCC5 /* GuidelinesIntroView.swift in Sources */,
 				C7A9BBC02BBC0EE400FFDFC6 /* Dummy.swift in Sources */,
 				C72FAF0D2BB9B9FB00FADFE7 /* LockerRepositoryImpl.swift in Sources */,
 			);
@@ -604,7 +609,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"LiLo/Preview Content\"";
-				DEVELOPMENT_TEAM = 4V452CD2YS;
+				DEVELOPMENT_TEAM = 927LH8SZ68;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LiLo/Info.plist;
@@ -642,7 +647,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"LiLo/Preview Content\"";
-				DEVELOPMENT_TEAM = 4V452CD2YS;
+				DEVELOPMENT_TEAM = 927LH8SZ68;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LiLo/Info.plist;
