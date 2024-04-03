@@ -58,8 +58,11 @@ struct GuidelinesInAppView: View {
                             .padding(.bottom, 4)
                             .fixedSize(horizontal: false, vertical: /*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/)
                     }
+                    
+                    Spacer()
+                        .frame(height: 80)
                 }
-                Spacer()
+                
             }.padding(16)
         }
         .navigationTitle("Guidelines")

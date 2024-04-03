@@ -146,11 +146,11 @@ import SwiftUI
                 newSelectedLocker.reportCount += 1
                 
                 if newSelectedLocker.reportCount >= 3 {
-                    newSelectedLocker.status = 1
+                    newSelectedLocker.status = 2
                 }
                 
-                if newSelectedLocker.reportCount <= -3 {
-                    newSelectedLocker.status = 2
+                if newSelectedLocker.reportCount <= 0 {
+                    newSelectedLocker.status = 1
                 }
                 
                 var newLockers: [LockerResponse] = []
@@ -215,11 +215,11 @@ import SwiftUI
                 newSelectedLocker.reportCount -= 1
                 
                 if newSelectedLocker.reportCount >= 3 {
-                    newSelectedLocker.status = 1
+                    newSelectedLocker.status = 2
                 }
                 
-                if newSelectedLocker.reportCount <= -3 {
-                    newSelectedLocker.status = 2
+                if newSelectedLocker.reportCount <= 0 {
+                    newSelectedLocker.status = 1
                 }
                 
                 var newLockers: [LockerResponse] = []

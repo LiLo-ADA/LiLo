@@ -50,6 +50,7 @@ struct LockInView: View {
                         )
                     )
                     .font(.Headline)
+                    .foregroundColor(.black2)
                     
                     Spacer()
                 }
@@ -90,7 +91,7 @@ struct LockInView: View {
                         VStack(alignment: .leading, spacing: 12) {
                             Text("Selected Locker")
                                 .font(.Headline)
-                                .foregroundColor(.black)
+                                .foregroundColor(.black2)
                             
                             Text("\(locker.area) - \(numberText)")
                                 .font(.LargeTitle)
@@ -109,6 +110,7 @@ struct LockInView: View {
                         .font(.Body2)
                         .padding(.horizontal, 60)
                         .multilineTextAlignment(.center)
+                        .foregroundColor(.black2)
                     
                     Spacer()
                         .frame(height: 24)
