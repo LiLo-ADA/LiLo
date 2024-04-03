@@ -79,6 +79,17 @@ import SwiftUI
         }
     }
     
+    private func selectRandomLocker(lockers: [LockerResponse]) {
+        Task {
+            for locker in lockers {
+                if locker.status == 1 {
+                    state.selectedLocker = locker
+                    return
+                }
+            }
+        }
+    }
+    
     private func lockIn() {
         Task {
             guard let lockerId = state.selectedLocker?.id else {
@@ -143,27 +154,24 @@ import SwiftUI
                 state.isLoading = false
                 
                 var newSelectedLocker = selectedLocker
-                newSelectedLocker.reportCount += 1
-                
-                if newSelectedLocker.reportCount >= 3 {
-                    newSelectedLocker.status = 2
-                }
-                
-                if newSelectedLocker.reportCount <= 0 {
-                    newSelectedLocker.status = 1
-                }
+                newSelectedLocker.reported = true
+                newSelectedLocker.status = 2
                 
                 var newLockers: [LockerResponse] = []
                 
                 switch state.selectedArea {
                 case .AreaA:
                     newLockers = state.areaA.lockers
+                    state.areaA.availability -= 1
                 case .AreaB:
                     newLockers = state.areaB.lockers
+                    state.areaB.availability -= 1
                 case .AreaC:
                     newLockers = state.areaC.lockers
+                    state.areaC.availability -= 1
                 case .AreaD:
                     newLockers = state.areaD.lockers
+                    state.areaD.availability -= 1
                 }
                 
                 newLockers.removeAll(
@@ -189,6 +197,7 @@ import SwiftUI
                 }
                 
                 state.selectedLocker = newSelectedLocker
+                state.showSubmittedAlert = true
             case .failure(let error):
                 state.error = error.localizedDescription
                 state.showErrorAlert = true
@@ -212,27 +221,24 @@ import SwiftUI
                 state.isLoading = false
                 
                 var newSelectedLocker = selectedLocker
-                newSelectedLocker.reportCount -= 1
-                
-                if newSelectedLocker.reportCount >= 3 {
-                    newSelectedLocker.status = 2
-                }
-                
-                if newSelectedLocker.reportCount <= 0 {
-                    newSelectedLocker.status = 1
-                }
+                newSelectedLocker.reported = true
+                newSelectedLocker.status = 1
                 
                 var newLockers: [LockerResponse] = []
                 
                 switch state.selectedArea {
                 case .AreaA:
                     newLockers = state.areaA.lockers
+                    state.areaA.availability += 1
                 case .AreaB:
                     newLockers = state.areaB.lockers
+                    state.areaB.availability += 1
                 case .AreaC:
                     newLockers = state.areaC.lockers
+                    state.areaC.availability += 1
                 case .AreaD:
                     newLockers = state.areaD.lockers
+                    state.areaD.availability += 1
                 }
                 
                 newLockers.removeAll(
@@ -258,6 +264,7 @@ import SwiftUI
                 }
                 
                 state.selectedLocker = newSelectedLocker
+                state.showSubmittedAlert = true
             case .failure(let error):
                 state.error = error.localizedDescription
                 state.showErrorAlert = true
@@ -300,6 +307,8 @@ import SwiftUI
                             state.areaA.isLoading = false
                             state.areaA.lockers = result
                             state.areaA.availability = result.filter { locker in locker.status == 1 }.count
+                            
+                            selectRandomLocker(lockers: result)
                         },
                         errorResult: { error in
                             state.areaA.isLoading = false

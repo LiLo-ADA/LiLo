@@ -13,7 +13,7 @@ class Dummy {
         area: "A",
         number: 1,
         status: 1,
-        reportCount: 0
+        reported: false
     )
     
     static let lockers: [LockerResponse] = (1...27).map { i in
@@ -22,7 +22,7 @@ class Dummy {
             area: "A",
             number: i,
             status: 1,
-            reportCount: 0
+            reported: false
         )
     }
 }

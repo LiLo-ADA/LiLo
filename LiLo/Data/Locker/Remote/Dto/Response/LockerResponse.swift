@@ -12,5 +12,5 @@ struct LockerResponse: Codable, Identifiable {
     let area: String
     let number: Int
     var status: Int
-    var reportCount: Int
+    var reported: Bool
 }

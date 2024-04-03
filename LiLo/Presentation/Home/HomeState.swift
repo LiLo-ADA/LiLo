@@ -22,6 +22,7 @@ struct HomeState {
     var isLoading: Bool = false
     var error: String? = nil
     var showErrorAlert: Bool = false
+    var showSubmittedAlert: Bool = false
     
     struct LockerState {
         var lockers: [LockerResponse] = []

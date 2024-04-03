@@ -26,8 +26,10 @@ struct LockerView: View {
         } else {
             if locker.status == 1 {
                 Color.darkTosca
+            } else if locker.status == 2 {
+                Color.lightVermillion
             } else {
-                Color.darkVermillion
+                Color.black2
             }
         }
     }
@@ -35,8 +37,14 @@ struct LockerView: View {
     private var strokeColor: Color {
         if locker.status == 1 {
             Color.darkTosca
+        } else if locker.status == 2 {
+            if isSelected {
+                Color.darkVermillion
+            } else {
+                Color.lightVermillion
+            }
         } else {
-            Color.darkVermillion
+            Color.black2
         }
     }
     
@@ -48,7 +56,11 @@ struct LockerView: View {
                 Color.darkVermillion
             }
         } else {
-            Color.white
+            if locker.status == 3 {
+                Color.grey
+            } else {
+                Color.white
+            }
         }
     }
     
@@ -73,6 +85,7 @@ struct LockerView: View {
                     .stroke(strokeColor, lineWidth: 2)
             }
         }
+        .disabled(locker.status==3)
     }
 }
 

@@ -103,14 +103,24 @@ struct LockInView: View {
                         Spacer()
                     }
                     .padding(.horizontal, 16)
+                    .alert(isPresented: $state.showSubmittedAlert) {
+                        Alert(
+                            title: Text("Report submitted")
+                                .font(.Headline),
+                            message: Text("Thank you for submitting"),
+                            dismissButton: .default(Text("OK").font(.Body))
+                        )
+                    }
                     
                     Spacer()
                     
-                    Text("Remember to place your belongings inside the locker before locking in")
-                        .font(.Body2)
-                        .padding(.horizontal, 60)
-                        .multilineTextAlignment(.center)
-                        .foregroundColor(.black2)
+                    Text(
+                        state.selectedLocker?.status == 1 ? "Remember to place your belongings inside the locker before locking in" : "You cannot choose an occupied locker as your designated locker"
+                    )
+                    .font(.Body2)
+                    .padding(.horizontal, 60)
+                    .multilineTextAlignment(.center)
+                    .foregroundColor(.black2)
                     
                     Spacer()
                         .frame(height: 24)
