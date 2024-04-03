@@ -60,7 +60,7 @@ struct HomeScreen: View {
         }
         .toolbar {
             ToolbarItem(placement: .topBarTrailing) {
-                HStack(spacing: 6) {
+                HStack(spacing: 12) {
                     CircleButton(
                         iconName: "lock.fill",
                         onClick: {
