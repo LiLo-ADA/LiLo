@@ -289,7 +289,6 @@
 			isa = PBXGroup;
 			children = (
 				C70D05782BBC38560022C5DD /* Info.plist */,
-				C7A9BBC32BBC209700FFDFC6 /* Resources */,
 				C72FAEF22BB9367400FADFE7 /* Utils */,
 				C72FAEDD2BB932D700FADFE7 /* Data */,
 				C72FAEDE2BB932DD00FADFE7 /* Presentation */,
@@ -363,21 +362,6 @@
 				C7A9BBBB2BBC0AB800FFDFC6 /* FontExtension.swift */,
 			);
 			path = Theme;
-			sourceTree = "<group>";
-		};
-		C7A9BBC32BBC209700FFDFC6 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				C7A9BBC42BBC209C00FFDFC6 /* fonts */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
-		C7A9BBC42BBC209C00FFDFC6 /* fonts */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
