@@ -10,6 +10,7 @@
 		635D1DB32BBCE1C700BAA5D3 /* GuidelinesInAppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635D1DB22BBCE1C700BAA5D3 /* GuidelinesInAppView.swift */; };
 		C7179C312BBCE10F0041E1AB /* PasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7179C302BBCE10F0041E1AB /* PasswordTextField.swift */; };
 		C7179C332BBCE20E0041E1AB /* PasswordSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7179C322BBCE20E0041E1AB /* PasswordSheet.swift */; };
+		C7179C362BBCF4C60041E1AB /* CircleNavigationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7179C352BBCF4C60041E1AB /* CircleNavigationButton.swift */; };
 		C72FAEE52BB9346C00FADFE7 /* UserApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72FAEE42BB9346C00FADFE7 /* UserApi.swift */; };
 		C72FAEEA2BB934E300FADFE7 /* AuthenticationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72FAEE92BB934E300FADFE7 /* AuthenticationRequest.swift */; };
 		C72FAEED2BB9358F00FADFE7 /* BaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72FAEEC2BB9358F00FADFE7 /* BaseResponse.swift */; };
@@ -56,6 +57,7 @@
 		C70D05782BBC38560022C5DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		C7179C302BBCE10F0041E1AB /* PasswordTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordTextField.swift; sourceTree = "<group>"; };
 		C7179C322BBCE20E0041E1AB /* PasswordSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordSheet.swift; sourceTree = "<group>"; };
+		C7179C352BBCF4C60041E1AB /* CircleNavigationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleNavigationButton.swift; sourceTree = "<group>"; };
 		C72FAEE42BB9346C00FADFE7 /* UserApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserApi.swift; sourceTree = "<group>"; };
 		C72FAEE92BB934E300FADFE7 /* AuthenticationRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationRequest.swift; sourceTree = "<group>"; };
 		C72FAEEC2BB9358F00FADFE7 /* BaseResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseResponse.swift; sourceTree = "<group>"; };
@@ -110,6 +112,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C7179C342BBCF49D0041E1AB /* Guidelines */ = {
+			isa = PBXGroup;
+			children = (
+				635D1DB22BBCE1C700BAA5D3 /* GuidelinesInAppView.swift */,
+			);
+			path = Guidelines;
+			sourceTree = "<group>";
+		};
 		C72FAEDD2BB932D700FADFE7 /* Data */ = {
 			isa = PBXGroup;
 			children = (
@@ -125,6 +135,7 @@
 			children = (
 				C7A9BBBA2BBC0AB000FFDFC6 /* Theme */,
 				C7A9BBA22BBB975200FFDFC6 /* Home */,
+				C7179C342BBCF49D0041E1AB /* Guidelines */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -318,6 +329,7 @@
 			isa = PBXGroup;
 			children = (
 				C7A9BBAF2BBBFAD900FFDFC6 /* CircleButton.swift */,
+				C7179C352BBCF4C60041E1AB /* CircleNavigationButton.swift */,
 				C7A9BBB62BBC021E00FFDFC6 /* AreaView.swift */,
 				C7A9BBB82BBC087900FFDFC6 /* AreaRow.swift */,
 				C7A9BBBD2BBC0EC500FFDFC6 /* LockerView.swift */,
@@ -341,7 +353,6 @@
 			children = (
 				C7A9BBB12BBC01C700FFDFC6 /* LockInView.swift */,
 				C7A9BBB32BBC01CF00FFDFC6 /* LockOutView.swift */,
-				635D1DB22BBCE1C700BAA5D3 /* GuidelinesInAppView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -471,6 +482,7 @@
 				C7A9BBA42BBB976600FFDFC6 /* HomeViewModel.swift in Sources */,
 				C7A9BBAE2BBBA91400FFDFC6 /* Area.swift in Sources */,
 				C7A9BBAA2BBB979800FFDFC6 /* HomeState.swift in Sources */,
+				C7179C362BBCF4C60041E1AB /* CircleNavigationButton.swift in Sources */,
 				C72FAEFA2BB9389B00FADFE7 /* AuthenticationResponse.swift in Sources */,
 				C72FAEEA2BB934E300FADFE7 /* AuthenticationRequest.swift in Sources */,
 				C7A9BBBE2BBC0EC500FFDFC6 /* LockerView.swift in Sources */,

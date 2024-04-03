@@ -70,12 +70,14 @@ struct HomeScreen: View {
                         }
                     )
                     
-                    CircleButton(
-                        iconName: "questionmark",
-                        onClick: {
-                            
-                        }
-                    )
+                    NavigationLink {
+                        GuidelinesInAppView()
+                    } label: {
+                        CircleNavigationButton(
+                            iconName: "questionmark"
+                        )
+                    }
+                    .buttonStyle(.plain)
                 }
             }
         }

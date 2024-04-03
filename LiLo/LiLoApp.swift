@@ -16,6 +16,7 @@ struct LiLoApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .accentColor(.darkTosca)
         }
     }
 }
