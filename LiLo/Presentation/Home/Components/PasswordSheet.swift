@@ -19,6 +19,7 @@ struct PasswordSheet: View {
         VStack(alignment: .leading, spacing: 12) {
             Text("Password")
                 .font(.Title2)
+                .foregroundColor(.black2)
             
             PasswordTextField(
                 text: $text,

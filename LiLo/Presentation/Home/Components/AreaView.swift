@@ -22,7 +22,7 @@ struct AreaView: View {
         if isSelected {
             Color.white
         } else {
-            Color.black
+            Color.black2
         }
     }
     

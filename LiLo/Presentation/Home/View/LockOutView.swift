@@ -27,7 +27,7 @@ struct LockOutView: View {
                     VStack(alignment: .leading, spacing: 12) {
                         Text("Selected Locker")
                             .font(.Headline)
-                            .foregroundColor(.black)
+                            .foregroundColor(.black2)
                         
                         Text("\(locker.area) - \(numberText)")
                             .font(.LargeTitle)
@@ -44,6 +44,7 @@ struct LockOutView: View {
                 .font(.Body2)
                 .padding(.horizontal, 48)
                 .multilineTextAlignment(.center)
+                .foregroundColor(.black2)
             
             Spacer()
                 .frame(height: 24)
@@ -51,18 +52,26 @@ struct LockOutView: View {
             Button {
                 onEvent(.ShowConfirmationAlert)
             } label: {
-                Text("Lock Out")
-                    .font(.Headline)
-                    .foregroundColor(.white)
-                    .frame(maxWidth: .infinity, minHeight: 48)
+                HStack {
+                    if state.isLoading {
+                        ProgressView()
+                    } else {
+                        Text("Lock Out")
+                            .font(.Headline)
+                            .foregroundColor(.white)
+                    }
+                }
+                .frame(maxWidth: .infinity, minHeight: 48)
+                .tint(Color.darkVermillion)
+                .background(
+                    state.isLoading ? .grey : .darkVermillion
+                )
+                .clipShape(RoundedRectangle(cornerRadius: 10))
+                .buttonBorderShape(
+                    .roundedRectangle(radius: 10)
+                )
             }
-            .tint(Color.darkVermillion)
-            .padding(.horizontal, 16)
-            .buttonStyle(.borderedProminent)
-            .buttonBorderShape(
-                .roundedRectangle(radius: 10)
-            )
-            .disabled(state.selectedLocker?.status == 2)
+            .disabled(state.isLoading)
             .alert(isPresented: $state.showConfirmationAlert) {
                 Alert(
                     title: Text("Lock out of your locker?")

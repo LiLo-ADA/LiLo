@@ -18,7 +18,7 @@ struct CircleNavigationButton: View {
                 .frame(
                     height: 17
                 )
-                .foregroundColor(.black)
+                .foregroundColor(.black2)
                 .fontWeight(.bold)
         }
         .frame(width: 36, height: 36)

@@ -118,18 +118,27 @@ struct LockInView: View {
                     Button {
                         onEvent(.ShowConfirmationAlert)
                     } label: {
-                        Text("Lock In")
-                            .font(.Headline)
-                            .foregroundColor(.white)
-                            .frame(maxWidth: .infinity, minHeight: 48)
+                        HStack {
+                            if state.isLoading {
+                                ProgressView()
+                            } else {
+                                Text("Lock In")
+                                    .font(.Headline)
+                                    .foregroundColor(.white)
+                            }
+                        }
+                        .frame(maxWidth: .infinity, minHeight: 48)
+                        .tint(Color.darkTosca)
+                        .background(
+                            (state.selectedLocker?.status == 2 || state.isLoading) ? .grey : .darkTosca
+                        )
+                        .clipShape(RoundedRectangle(cornerRadius: 10))
+                        .padding(.horizontal, 16)
+                        .buttonBorderShape(
+                            .roundedRectangle(radius: 10)
+                        )
                     }
-                    .tint(Color.darkTosca)
-                    .padding(.horizontal, 16)
-                    .buttonStyle(.borderedProminent)
-                    .buttonBorderShape(
-                        .roundedRectangle(radius: 10)
-                    )
-                    .disabled(state.selectedLocker?.status == 2)
+                    .disabled(state.selectedLocker?.status == 2 || state.isLoading)
                     .alert(isPresented: $state.showConfirmationAlert) {
                         Alert(
                             title: Text("Lock in this locker?")
@@ -167,7 +176,7 @@ struct LockInView: View {
                         Text("Report Locker")
                             .font(.Headline)
                             .foregroundColor(Color.darkVermillion)
-                            .frame(maxWidth: .infinity, minHeight: 48)
+                            .frame(maxWidth: .infinity, minHeight: 40)
                     }
                     .background(
                         RoundedRectangle(

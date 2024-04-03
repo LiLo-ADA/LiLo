@@ -25,6 +25,7 @@ struct PasswordTextField: View {
                         text: $text
                     )
                     .font(.Body)
+                    .foregroundColor(.black2)
                     .focused($textFieldFocus)
                 } else {
                     SecureField(
@@ -32,6 +33,7 @@ struct PasswordTextField: View {
                         text: $text
                     )
                     .font(.Body)
+                    .foregroundColor(.black2)
                     .focused($textFieldFocus)
                 }
             }
@@ -40,21 +42,36 @@ struct PasswordTextField: View {
             Spacer()
                 .frame(width: 8)
             
-            Button {
-                onTogglePassword()
-            } label: {
-                Image(systemName: !passwordVisible ? "eye.slash" : "eye")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(
-                        width: 16
-                    )
-                    .foregroundColor(.black)
+            Text("#")
+                .font(.Body)
+                .foregroundColor(.black2)
+            
+            HStack(alignment: .center, spacing: 0) {
+                Divider()
+                    .background(Color.grey)
+                
+                Spacer()
+                    .frame(width: 8)
+                
+                Button {
+                    onTogglePassword()
+                } label: {
+                    Image(systemName: !passwordVisible ? "eye.slash" : "eye")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(
+                            width: 16
+                        )
+                        .bold()
+                        .foregroundColor(
+                            !passwordVisible ? .darkVermillion : .darkTosca
+                        )
+                }
             }
         }
         .tint(.darkTosca)
-        .padding(.horizontal, 16)
-        .frame(height: 32)
+        .padding(.horizontal, 8)
+        .frame(height: 40)
         .overlay(
             RoundedRectangle(cornerRadius: 8)
                 .strokeBorder(

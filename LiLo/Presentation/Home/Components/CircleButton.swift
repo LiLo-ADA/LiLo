@@ -22,7 +22,7 @@ struct CircleButton: View {
                     .frame(
                         height: 17
                     )
-                    .foregroundColor(.black)
+                    .foregroundColor(.black2)
             }
             .frame(width: 36, height: 36)
             .clipShape(Circle())
