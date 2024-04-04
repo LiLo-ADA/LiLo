@@ -40,7 +40,11 @@ struct AreaView: View {
     
     private var selectedColor: Color {
         if isSelected {
-            Color.darkTosca
+            if avaibility <= 0 {
+                Color.darkVermillion
+            } else {
+                Color.darkTosca
+            }
         } else {
             Color.clear
         }
@@ -48,7 +52,11 @@ struct AreaView: View {
     
     private var borderColor: Color {
         if isSelected {
-            Color.darkTosca
+            if avaibility <= 0 {
+                Color.darkVermillion
+            } else {
+                Color.darkTosca
+            }
         } else {
             Color.grey
         }

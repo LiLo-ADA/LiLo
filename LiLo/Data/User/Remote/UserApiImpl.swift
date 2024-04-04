@@ -23,6 +23,8 @@ class UserApiImpl: UserApi {
         var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = "POST"
         urlRequest.httpBody = data
+        
+        urlRequest.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
             
         do {
             let (data, response) = try await URLSession.shared.data(for: urlRequest)

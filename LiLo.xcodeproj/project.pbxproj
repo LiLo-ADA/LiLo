@@ -51,6 +51,11 @@
 		C7A9BBBE2BBC0EC500FFDFC6 /* LockerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A9BBBD2BBC0EC500FFDFC6 /* LockerView.swift */; };
 		C7A9BBC02BBC0EE400FFDFC6 /* Dummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A9BBBF2BBC0EE400FFDFC6 /* Dummy.swift */; };
 		C7A9BBC22BBC102E00FFDFC6 /* LockerList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A9BBC12BBC102E00FFDFC6 /* LockerList.swift */; };
+		C7F62EFB2BBE375900C5E383 /* WelcomeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F62EFA2BBE375900C5E383 /* WelcomeButton.swift */; };
+		C7F62EFD2BBE376700C5E383 /* GeneralButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F62EFC2BBE376700C5E383 /* GeneralButton.swift */; };
+		C7F62EFF2BBE377200C5E383 /* BackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F62EFE2BBE377200C5E383 /* BackButton.swift */; };
+		C7F62F012BBE378500C5E383 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F62F002BBE378500C5E383 /* WelcomeView.swift */; };
+		C7F62F032BBE379300C5E383 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F62F022BBE379300C5E383 /* LoginView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -101,6 +106,11 @@
 		C7A9BBBD2BBC0EC500FFDFC6 /* LockerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockerView.swift; sourceTree = "<group>"; };
 		C7A9BBBF2BBC0EE400FFDFC6 /* Dummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dummy.swift; sourceTree = "<group>"; };
 		C7A9BBC12BBC102E00FFDFC6 /* LockerList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockerList.swift; sourceTree = "<group>"; };
+		C7F62EFA2BBE375900C5E383 /* WelcomeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeButton.swift; sourceTree = "<group>"; };
+		C7F62EFC2BBE376700C5E383 /* GeneralButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralButton.swift; sourceTree = "<group>"; };
+		C7F62EFE2BBE377200C5E383 /* BackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButton.swift; sourceTree = "<group>"; };
+		C7F62F002BBE378500C5E383 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		C7F62F022BBE379300C5E383 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +154,8 @@
 			isa = PBXGroup;
 			children = (
 				C7A9BBBA2BBC0AB000FFDFC6 /* Theme */,
+				C7F62EF72BBE373700C5E383 /* Welcome */,
+				C7F62F042BBE37BC00C5E383 /* Login */,
 				C7A9BBA22BBB975200FFDFC6 /* Home */,
 				C7179C342BBCF49D0041E1AB /* GuidelinesInApp */,
 				C7179C372BBD6DBD0041E1AB /* GuidelinesIntro */,
@@ -375,6 +387,57 @@
 			path = Theme;
 			sourceTree = "<group>";
 		};
+		C7F62EF72BBE373700C5E383 /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				C7F62EF92BBE374500C5E383 /* Views */,
+				C7F62EF82BBE373E00C5E383 /* Components */,
+			);
+			path = Welcome;
+			sourceTree = "<group>";
+		};
+		C7F62EF82BBE373E00C5E383 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				C7F62EFA2BBE375900C5E383 /* WelcomeButton.swift */,
+				C7F62EFE2BBE377200C5E383 /* BackButton.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		C7F62EF92BBE374500C5E383 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C7F62F002BBE378500C5E383 /* WelcomeView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C7F62F042BBE37BC00C5E383 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				C7F62F062BBE37C800C5E383 /* Components */,
+				C7F62F052BBE37C000C5E383 /* Views */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		C7F62F052BBE37C000C5E383 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C7F62F022BBE379300C5E383 /* LoginView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C7F62F062BBE37C800C5E383 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				C7F62EFC2BBE376700C5E383 /* GeneralButton.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -445,6 +508,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7F62EFD2BBE376700C5E383 /* GeneralButton.swift in Sources */,
 				C72FAEFE2BB93A6000FADFE7 /* UserRepository.swift in Sources */,
 				C72FAEF12BB935D300FADFE7 /* Constant.swift in Sources */,
 				C72FAF002BB95BE400FADFE7 /* UserRepositoryImpl.swift in Sources */,
@@ -458,6 +522,7 @@
 				C7A9BBA62BBB976D00FFDFC6 /* HomeEvent.swift in Sources */,
 				C7A9BBB22BBC01C700FFDFC6 /* LockInView.swift in Sources */,
 				C72FAEED2BB9358F00FADFE7 /* BaseResponse.swift in Sources */,
+				C7F62EFF2BBE377200C5E383 /* BackButton.swift in Sources */,
 				C72FAEE52BB9346C00FADFE7 /* UserApi.swift in Sources */,
 				C77A1E432BB41EAE006FE673 /* ContentView.swift in Sources */,
 				C72FAEEF2BB935B800FADFE7 /* NetworkError.swift in Sources */,
@@ -476,6 +541,9 @@
 				C72FAF022BB95D5000FADFE7 /* AppModule.swift in Sources */,
 				C7A9BBA42BBB976600FFDFC6 /* HomeViewModel.swift in Sources */,
 				C7A9BBAE2BBBA91400FFDFC6 /* Area.swift in Sources */,
+				C7F62F012BBE378500C5E383 /* WelcomeView.swift in Sources */,
+				C7F62EFB2BBE375900C5E383 /* WelcomeButton.swift in Sources */,
+				C7F62F032BBE379300C5E383 /* LoginView.swift in Sources */,
 				C7A9BBAA2BBB979800FFDFC6 /* HomeState.swift in Sources */,
 				C7179C362BBCF4C60041E1AB /* CircleNavigationButton.swift in Sources */,
 				C72FAEFA2BB9389B00FADFE7 /* AuthenticationResponse.swift in Sources */,

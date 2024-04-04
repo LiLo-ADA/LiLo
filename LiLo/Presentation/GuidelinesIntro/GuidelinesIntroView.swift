@@ -127,9 +127,9 @@ struct GuidelinesIntroView: View {
     private func done() {
         Task {
             isLoading = true
-//            let userDefaults = UserDefaults.standard
-//            userDefaults.set(false, forKey: "showGuidelines")
-//            isLoading = false
+            let userDefaults = UserDefaults.standard
+            userDefaults.set(false, forKey: "showGuidelines")
+            isLoading = false
         }
     }
 }

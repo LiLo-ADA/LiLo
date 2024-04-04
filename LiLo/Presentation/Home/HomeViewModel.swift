@@ -32,7 +32,17 @@ import SwiftUI
         switch event {
         case .SelectArea(area: let area):
             state.selectedArea = area
-            state.selectedLocker = nil
+            
+            switch area {
+            case .AreaA:
+                selectRandomLocker(lockers: state.areaA.lockers)
+            case .AreaB:
+                selectRandomLocker(lockers: state.areaB.lockers)
+            case .AreaC:
+                selectRandomLocker(lockers: state.areaC.lockers)
+            case .AreaD:
+                selectRandomLocker(lockers: state.areaD.lockers)
+            }
         case .Refresh:
             refresh()
         case .SelectLocker(locker: let locker):
@@ -87,6 +97,8 @@ import SwiftUI
                     return
                 }
             }
+            
+            state.selectedLocker = nil
         }
     }
     

@@ -20,10 +20,10 @@ func postRequest<T: Decodable>(
     urlRequest.httpBody = data
     
     let keyChain = KeychainSwift.shared
-    let token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiIwLjAuMC4wOjgwODAvYXVkaWVuY2UiLCJpc3MiOiIwLjAuMC4wOjgwODAvIiwiZW1haWwiOiJ0ZXN0ZW1haWwxM0BlbWFpbC5jb20ifQ.BU0_Tvcf9ME9OE88Pr7E4cPWLhpERW1xkerIYQo7Ogk"
-//    guard let token = keyChain.get("access_token") else {
-//        return .failure(NetworkError.unauthorized)
-//    }
+//    let token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiIwLjAuMC4wOjgwODAvYXVkaWVuY2UiLCJpc3MiOiIwLjAuMC4wOjgwODAvIiwiZW1haWwiOiJ0ZXN0ZW1haWwxM0BlbWFpbC5jb20ifQ.BU0_Tvcf9ME9OE88Pr7E4cPWLhpERW1xkerIYQo7Ogk"
+    guard let token = keyChain.get("accessToken") else {
+        return .failure(NetworkError.unauthorized)
+    }
 
     urlRequest.addValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
     urlRequest.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
@@ -67,11 +67,11 @@ func getRequest<T: Decodable>(
     urlRequest.httpMethod = "GET"
     
     let keyChain = KeychainSwift.shared
-//    guard let token = keyChain.get("access_token") else {
-//        return .failure(NetworkError.unauthorized)
-//    }
+    guard let token = keyChain.get("accessToken") else {
+        return .failure(NetworkError.unauthorized)
+    }
     
-    let token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiIwLjAuMC4wOjgwODAvYXVkaWVuY2UiLCJpc3MiOiIwLjAuMC4wOjgwODAvIiwiZW1haWwiOiJ0ZXN0ZW1haWwxM0BlbWFpbC5jb20ifQ.BU0_Tvcf9ME9OE88Pr7E4cPWLhpERW1xkerIYQo7Ogk"
+//    let token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiIwLjAuMC4wOjgwODAvYXVkaWVuY2UiLCJpc3MiOiIwLjAuMC4wOjgwODAvIiwiZW1haWwiOiJ0ZXN0ZW1haWwxM0BlbWFpbC5jb20ifQ.BU0_Tvcf9ME9OE88Pr7E4cPWLhpERW1xkerIYQo7Ogk"
 
     urlRequest.addValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
     urlRequest.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")

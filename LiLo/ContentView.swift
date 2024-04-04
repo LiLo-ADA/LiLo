@@ -12,11 +12,17 @@ struct ContentView: View {
     @AppStorage("showGuidelines") var showGuidelines: Bool = true
     
     var body: some View {
-        if showGuidelines {
-            GuidelinesIntroView()
-        } else {
+        if !isLogin {
             NavigationStack {
-                HomeScreen()
+                WelcomeView()
+            }
+        } else {
+            if showGuidelines {
+                GuidelinesIntroView()
+            } else {
+                NavigationStack {
+                    HomeScreen()
+                }
             }
         }
     }
