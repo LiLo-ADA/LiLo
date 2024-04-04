@@ -8,11 +8,25 @@
 import SwiftUI
 
 struct WelcomeButton: View {
+    let labelText: String
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationLink {
+            LogInView()
+        } label: {
+            Text(labelText)
+                .foregroundStyle(Color.black)
+                .font(.headline)
+                .frame(maxWidth: .infinity, maxHeight: 52)
+            .padding(12)
+            .font(.headline)
+            .overlay(
+                RoundedRectangle(cornerRadius: 10)
+                    .stroke(Color.grey, lineWidth: 2))
+        }
+        
     }
 }
 
 #Preview {
-    WelcomeButton()
+    WelcomeButton(labelText: "")
 }

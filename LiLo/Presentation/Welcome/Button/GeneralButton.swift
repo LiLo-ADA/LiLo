@@ -8,11 +8,22 @@
 import SwiftUI
 
 struct GeneralButton: View {
+    let labelText: String
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Button(action: {} , label: {
+            Text(labelText)
+                .foregroundColor(Color.white)
+                .font(.headline)
+        })
+        
+        .frame(maxWidth: .infinity, maxHeight: 54)
+        .background(
+            RoundedRectangle(cornerRadius: 10)
+                .foregroundColor(Color.darkTosca)
+        )
     }
 }
 
 #Preview {
-    GeneralButton()
+    GeneralButton(labelText: "")
 }
