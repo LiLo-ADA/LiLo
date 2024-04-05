@@ -37,4 +37,8 @@ extension Font {
     static var Body2: Font {
         Font(UIFont.systemFont(ofSize: 13, weight: .regular))
     }
+    
+    static var TextField: Font {
+        Font(UIFont.systemFont(ofSize: 15, weight: .regular))
+    }
 }

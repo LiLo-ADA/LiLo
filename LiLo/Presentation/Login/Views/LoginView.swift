@@ -17,26 +17,44 @@ struct LogInView: View {
     var body: some View {
         
         VStack(alignment: .center, spacing: 32) {
-//            HStack{
-//                BackButton(labelText: "Welcome")
-//                Spacer()
-//            }
+            //            HStack{
+            //                BackButton(labelText: "Welcome")
+            //                Spacer()
+            //            }
             Text("Log In")
                 .font(.Title2)
-            TextField("Email", text: $email)
-                .frame(maxWidth: .infinity, maxHeight: 40)
-                .padding(.horizontal, 12)
-                .overlay(
-                RoundedRectangle(cornerRadius: 12)
-                    .stroke(Color.grey, lineWidth: 1))
+                .foregroundColor(.black2)
             
-
-            GeneralButton(labelText: "Log In", onClick: {
-                authenticate()
-            })
+            HStack(spacing: 12) {
+                TextField("Email", text: $email)
+                    .font(.TextField)
+                    .foregroundColor(.black2)
+                
+                Text("@bsd.idserve.net")
+                    .font(.Body2)
+                    .fontWeight(.semibold)
+                    .foregroundColor(.black2)
+            }
+            .padding(.horizontal, 12)
+            .frame(height: 42)
+            .overlay(
+                RoundedRectangle(cornerRadius: 12)
+                    .stroke(Color.grey, lineWidth: 1)
+            )
+            
+            
+            GeneralButton(
+                labelText: "Log In",
+                disabled: email.isEmpty || isLoading,
+                onClick: {
+                    authenticate()
+                }
+            )
+            
+            Spacer()
         }
         .padding(.horizontal, 16)
-        Spacer()
+        .padding(.vertical, 24)
     }
     
     func authenticate() {
@@ -45,7 +63,7 @@ struct LogInView: View {
             
             let result = await userRepository
                 .authenticate(
-                    email: email,
+                    email: "\(email)@bsd.idserve.net".lowercased(),
                     session: sessionId
                 )
             

@@ -18,19 +18,24 @@ struct WelcomeButton: View {
             )
         } label: {
             Text(labelText)
-                .foregroundStyle(Color.black)
+                .foregroundStyle(Color.black2)
                 .font(.headline)
-                .frame(maxWidth: .infinity, maxHeight: 52)
-            .padding(12)
-            .font(.headline)
-            .overlay(
-                RoundedRectangle(cornerRadius: 10)
-                    .stroke(Color.grey, lineWidth: 2))
+                .clipShape(RoundedRectangle(cornerRadius: 10))
+                .contentShape(RoundedRectangle(cornerRadius: 10))
+                .frame(maxWidth: .infinity)
+                .frame(height: 52)
+                .font(.Headline)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 10)
+                        .stroke(Color.grey, lineWidth: 2)
+                )
         }
         
     }
 }
 
 #Preview {
-    WelcomeButton(labelText: "", sessionId: 1)
+    NavigationStack {
+        WelcomeButton(labelText: "Morning Session", sessionId: 1)
+    }
 }
